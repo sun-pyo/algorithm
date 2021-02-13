@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -18,8 +17,6 @@ int main(){
         cin>>num;
         coin.push_back(num);
     }
-    
-    sort(coin.begin(), coin.end());
 
     DP[0] = 1;
 
