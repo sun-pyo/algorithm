@@ -12,7 +12,6 @@ int Y[] = {1, -1, 0, 0};
 
 int DFS(int x, int y){
     int new_x, new_y;
-    if(x == N-1 && y == M-1) return 1;
     if(DP[y][x] != -1) return DP[y][x];
     DP[y][x] = 0;
     for(int i=0;i<4;i++){
@@ -39,6 +38,7 @@ int main(){
         }
     }
 
+    DP[M-1][N-1] = 1;
     DFS(0,0);
 
     cout<<DP[0][0];
